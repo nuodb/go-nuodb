@@ -11,7 +11,7 @@ import (
 	"time"
 )
 
-const default_dsn = "nuodb://robinh:crossbow@localhost:48004/tests?timezone=America/Los_Angeles"
+const default_dsn = "nuodb://dba:goalie@localhost:48004/tests?timezone=America/Los_Angeles"
 
 func exec(t *testing.T, db *sql.DB, sql string, args ...interface{}) (li, ra int64) {
 	result, err := db.Exec(sql, args...)
