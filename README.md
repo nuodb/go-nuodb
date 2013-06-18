@@ -28,7 +28,7 @@ import (
 
 func main() {
 	// func Open(driverName, dataSourceName string) (*DB, error)
-	db, err := sql.Open("nuodb", "nuodb://robinh:crossbow@localhost:48004/tests?schema=abcd&timezone=UTC")
+	db, err := sql.Open("nuodb", "nuodb://dba:goalie@localhost:48004/tests?schema=abcd&timezone=UTC")
 }
 ```
 
