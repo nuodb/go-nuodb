@@ -53,7 +53,13 @@ int nuodb_open(struct nuodb *db, const char *database, const char *username,
             const char *k = props[i];
             const char *v = props[i+1];
             if (k && v && std::strlen(k) > 0 && std::strlen(v) > 0) {
-                p->putValue(k, v);
+                if (std::strcmp(k, "preferred_address_family") == 0) {
+                    if (std::strcmp(v, "ipv6") == 0) {
+                        p->putValue("ipVersion", "v6");
+                    }
+                } else {
+                    p->putValue(k, v);
+                }
             }
         }
 

@@ -40,6 +40,7 @@ Optional:
 
 * schema=`default schema`
 * timezone=`default timezone`
+* preferred_address_family=`ipv6`
 
 ## Test
 
